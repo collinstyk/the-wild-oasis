@@ -49,7 +49,7 @@ function SignupForm() {
       </FormRow>
 
       <FormRow
-        label="Password (min 8 characters)"
+        label="New password (min 8 chars)"
         error={errors?.password?.message}
       >
         <Input
@@ -81,7 +81,12 @@ function SignupForm() {
 
       <FormRow>
         {/* type is an HTML attribute!, the button directly below will automatically reset the form (input and select field). */}
-        <Button variation="secondary" type="reset" disabled={isLoading}>
+        <Button
+          variation="secondary"
+          type="reset"
+          disabled={isLoading}
+          onClick={reset}
+        >
           Cancel
         </Button>
         <Button disabled={isLoading}>
