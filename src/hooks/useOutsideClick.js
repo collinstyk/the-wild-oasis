@@ -22,7 +22,7 @@ export default function useOutsideClick(handler, listenCapturing = true) {
           // once: true,
         });
     },
-    [handler]
+    [handler, listenCapturing]
   );
 
   return { ref };
